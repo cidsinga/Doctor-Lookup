@@ -16,9 +16,10 @@ $(document).ready(function() {
     })();
     if(this.value !=true){
       $('#showDocName').text('No Results Found');
+    } else {
+      function getElements(response){
+        $('#showDocName').text(`response.data.practices.name`);
+      }
     }
-    function getElements(resonse){
-      $('#showDocName').text(`Here's a list of doctors who can treat ${condish}:`);
-    }
-  })
-})
+  });
+});
