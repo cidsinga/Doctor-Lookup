@@ -19,9 +19,9 @@ $(document).ready(function() {
     // } else {
       function getElements(response){
         $('#showDocName').text(`Doctors that treat ${condish}:
-          ${response.doctorList.meta.data.practices[4]}`);
+          ${response.practices}`);
       }
 
 
-})
+  })
 });
