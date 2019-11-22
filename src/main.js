@@ -19,18 +19,9 @@ $(document).ready(function() {
     // } else {
       function getElements(response){
         console.log(response);
-      let arr = [];
-      for (var i = 0; i < response.length; i++) {
-        arr.push(response.data[0].practices[i].name)
-        console.log(arr);
-      }
-      let docList = ''
-        for (var j = 0; j < arr.length; j++) {
-          docList += '<li>' + arr[j] + '</li>';
-        }
         $('#showDocName').text(`Doctors that treat ${condish}:
-          ${response.data[0].practices[0].name}`);
-          $('#pubGroup').append(docList);
+          ${response.data[1].profile.first_name}
+          ${response.data[1].profile.last_name}`);
       }
 
 
