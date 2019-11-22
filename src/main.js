@@ -14,12 +14,14 @@ $(document).ready(function() {
       const response = await doctorList.getDocByCondish(condish); // replace doc
       getElements(response);
     })();
-    if(this.value !=true){
-      $('#showDocName').text('No Results Found');
-    } else {
+    // if(this.value !=true){
+    //   $('#showDocName').text('No Results Found');
+    // } else {
       function getElements(response){
-        $('#showDocName').text(`response.data.practices.name`);
+        $('#showDocName').text(`Doctors that treat ${condish}:
+          ${response.doctorList.meta.data.practices[4]}`);
       }
-    }
-  });
+
+
+})
 });
