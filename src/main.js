@@ -18,6 +18,7 @@ $(document).ready(function() {
     //   $('#showDocName').text('No Results Found');
     // } else {
       function getElements(response){
+        console.log(response);
         $('#showDocName').text(`Doctors that treat ${condish}:
           ${response.practices}`);
       }
