@@ -20,7 +20,7 @@ $(document).ready(function() {
       function getElements(response){
         console.log(response);
         $('#showDocName').text(`Doctors that treat ${condish}:
-          ${response.practices}`);
+          ${response.data[0].practices[0].name}`);
       }
 
 
