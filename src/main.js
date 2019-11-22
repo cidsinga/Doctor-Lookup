@@ -14,6 +14,11 @@ $(document).ready(function() {
       const response = await doctorList.getDocByCondish(condish); // replace doc
       getElements(response);
     })();
-    
+    if(this.value !=true){
+      $('#showDocName').text('No Results Found');
+    }
+    function getElements(resonse){
+      $('#showDocName').text(`Here's a list of doctors who can treat ${condish}:`);
+    }
   })
 })
