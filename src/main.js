@@ -14,9 +14,9 @@ $(document).ready(function() {
       const response = await doctorList.getDocByCondish(condish); // replace doc
       getElements(response);
     })();
-    if(this.value !=true){
-        $('#showDocName').text('No Results Found');
-      } else {
+    // if(this.value !=true){
+    //     $('#showDocName').text('No Results Found');
+    //   } else {
     function getElements(response){
       console.log(response);
       // let arr = [];
@@ -32,7 +32,7 @@ $(document).ready(function() {
       $('#showDocName').text(`Doctors that treat ${condish}:
         ${response.data[1].profile.first_name}
         ${response.data[1].profile.last_name}`);
-      }
+      // }
     };
   })
 });
