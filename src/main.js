@@ -19,15 +19,15 @@ $(document).ready(function() {
     //   } else {
     function getElements(response){
       console.log(response);
-      // let arr = [];
-      // for (var i = 0; i < response.length; i++) {
-      //   arr.push(response.data[i].profile.first_name + response.data[i].profile.last_name);
-      // }
-      // let docList = '';
-      // for (var j = 0; j < arr.length; j++) {
-      //   doclist += '<li>' + arr[j] + '<li>';
-      //   console.log(docList);
-      // }
+      let arr = [];
+      for (var i = 0; i < response.data.length; i++) {
+        arr.push(response.data[i].profile.first_name + response.data[i].profile.last_name);
+      }
+      let docList = '';
+      for (var j = 0; j < arr.length; j++) {
+        docList += '<li>' + arr[j] + '<li>';
+        console.log(docList);
+      }
 
       $('#showDocName').text(`Doctors that treat ${condish}:
         ${response.data[1].profile.first_name}
